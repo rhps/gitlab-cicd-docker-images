@@ -11,4 +11,6 @@ RUN 		apk add --update --no-cache curl make ca-certificates openssl python \
     		&& tar zxvf google-cloud-sdk.tar.gz && ./google-cloud-sdk/install.sh --usage-reporting=false --path-update=true \
     		&& PATH="google-cloud-sdk/bin:${PATH}" \
     		&& gcloud --quiet components update \
-    		&& gcloud components install beta \
+    		&& gcloud components install beta
+
+ENV			PATH="google-cloud-sdk/bin:${PATH}"
