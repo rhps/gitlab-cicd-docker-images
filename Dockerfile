@@ -39,8 +39,7 @@ COPY dockerd-entrypoint.sh /usr/local/bin/
 VOLUME /var/lib/docker
 EXPOSE 2375
 
-WORKDIR		/usr/local/bin/
-ENTRYPOINT ["dockerd-entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "-c", "dockerd-entrypoint.sh"]
 CMD []
 
 # reference from:
