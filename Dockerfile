@@ -3,7 +3,7 @@ MAINTAINER	Rio Harapan Ps. <harapan@arc.itb.ac.id>
 
 WORKDIR 	/home
 
-RUN 		apk add --update --no-cache curl make ca-certificates openssl python btrfs-progs e2fsprogs e2fsprogs-extra iptables xfsprogs xz pigz \
+RUN 		apk add --update --no-cache curl make ca-certificates openssl python btrfs-progs e2fsprogs e2fsprogs-extra iptables xfsprogs xz pigz; \
 			if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then \
 				apk add --no-cache zfs; \
 			fi \
