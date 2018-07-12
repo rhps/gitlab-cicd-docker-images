@@ -34,8 +34,8 @@ RUN set -ex; \
 	chmod +x /usr/local/bin/dind; \
 	apk del .fetch-deps
 
-RUN ["chmod", "+x", "dockerd-entrypoint.sh"]
 COPY dockerd-entrypoint.sh /usr/local/bin/
+RUN ["chmod", "+x", "/usr/local/bin/dockerd-entrypoint.sh"]
 
 VOLUME /var/lib/docker
 EXPOSE 2375
